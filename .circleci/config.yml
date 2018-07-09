@@ -23,7 +23,7 @@ jobs:
           command: |
             java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-    override:
-	  name: Deploy Master to Heroku
-          - ant -lib lib/ Build: 
-        	timeout: 600
+    test:
+      override:
+      - ant -lib lib/ Build: 
+          timeout: 600
