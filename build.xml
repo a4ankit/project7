@@ -5,11 +5,11 @@
     <taskdef resource="net/sf/antcontrib/antlib.xml" />
     <property environment="env" />
     <echo>Branch: ${env.CIRCLE_BRANCH}</echo>
-    <property file="build.${env.CIRCLE_BRANCH}.properties" />
+    <property file="build.master.properties" />
     <echo>${build.cmd}</echo>
     <antcall target="${build.cmd}" />
   </target>
-  <target name="DeployAndCheckOnly">
+  <target name="deployCode">
     <echo>Deploy Code CheckOnly in Org with username: ${sf.username}</echo>
     <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" sessionId="${sf.sessionId}" maxPoll="${sf.maxPoll}" deployRoot="${user.dir}/src" logType="Detail" checkOnly="${sf.checkOnly}" />
   </target>
