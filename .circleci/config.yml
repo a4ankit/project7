@@ -1,5 +1,6 @@
 version: 2
 jobs:
+  build:
   override:
     - ant -lib lib/ Build: 
         timeout: 600
