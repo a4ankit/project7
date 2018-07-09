@@ -23,12 +23,11 @@ jobs:
           command: |
             java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-   deploy:
+    deploy:
     steps:
       - checkout
       - run:
           name: Deploy Master to Heroku
           command: |
-		   ant -lib lib/ Build: 
+          	ant -lib lib/ Build
           timeout: 600
-  
