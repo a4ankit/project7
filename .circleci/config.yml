@@ -26,6 +26,8 @@ jobs:
       - run: mkdir deploy-reports
       - run:
           name: Deploy Master to SF
-          command: |
+          command: |	    
+	    sudo apt-get install --only-upgrade ant
+	    ant -v
             ant -lib lib/ Build 
           timeout: 600
