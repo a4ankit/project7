@@ -26,9 +26,9 @@ jobs:
       - run:
           name: Download Ant
           command: |	    
-	    curl -O https://gs0.salesforce.com/dwnld/SfdcAnt/salesforce_ant_43.0.zip
+	    	curl -O https://gs0.salesforce.com/dwnld/SfdcAnt/salesforce_ant_43.0.zip
       - run:
-	  name: Deploy to SF
-	  command: |
-		ant -lib lib/ Build 
-          timeout: 600
+		  name: Deploy to SF
+		  command: |
+			ant -lib lib/ Build 
+		  timeout: 600
